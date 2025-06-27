@@ -1,3 +1,6 @@
+from __future__ import annotations
+
+
 class Animal:
     alive = []
 
@@ -22,7 +25,7 @@ class Herbivore(Animal):
 
 
 class Carnivore(Animal):
-    def bite(self, target: str) -> None:
+    def bite(self, target: Carnivore) -> None:
         if not isinstance(target, Herbivore):
             return
         if target.hidden:
